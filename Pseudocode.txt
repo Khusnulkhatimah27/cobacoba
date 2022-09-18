@@ -1,0 +1,38 @@
+variabel:
+	hargaBarang (string)
+	kodeBarang (int)
+    stokBarang (int)
+	jumlahBarang(int)
+	totalHarga(string)
+	jumlahUang(string)
+
+prosedure tampilBarang():
+	print:
+		1. barang 1
+		2. barang 2
+        3. barang 3
+        4. barang 4
+		5. dst..
+end prosedure
+
+prosedure checkout():
+	(proses checkout)
+	print: "Pembayaran Berhasil"
+end prosedure
+
+main:
+
+	call tampilBarang()
+
+	input: kodeBarang, jumlBaharang
+	if jumlahBarang <= stokBarang:
+        totalHarga = hargaBarang * jumlahBarang
+        
+		input: jumlahBarang
+		if jumlahBarang >= totalHarga:
+			call checkout()
+		else:
+			print "Silakan Ambil Tambahan Barang Pilihan Anda"
+	else:
+		print "Silakan Melakukan Pembayaran"
+		call tampilBarang()
